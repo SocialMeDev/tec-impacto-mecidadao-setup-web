@@ -1,10 +1,7 @@
 # dependencies
 /node_modules
-/.pnp
-.pnp.js
-
-# testing
-/coverage
+/yarn.lock
+/package-lock.json
 
 # next.js
 /.next/
@@ -12,9 +9,6 @@
 
 # production
 /build
-
-# local env files
-.env*.local
 
 # typescript
 *.tsbuildinfo
