@@ -1,4 +1,5 @@
 export * from './buttons'
 export * from './feedback'
 export * from './form'
+export * from './inputs'
 export * from './media'
