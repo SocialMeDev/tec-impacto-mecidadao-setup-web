@@ -1,5 +1,6 @@
-export * from './cepMask'
 export * from './brazilianDateMask'
 export * from './brazilianTelephoneMask'
+export * from './cepMask'
+export * from './cnpjMask'
 export * from './cnsMask'
 export * from './cpfMask'
