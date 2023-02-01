@@ -4,8 +4,8 @@ const customTheme = extendTheme(
   {
     fonts: {
       heading: 'Poppins',
-      body: 'Poppins'
-    }
+      body: 'Poppins',
+    },
   },
   withDefaultSize({ size: 'sm' })
 )
