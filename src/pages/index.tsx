@@ -12,7 +12,7 @@ export default function Setup() {
       </Head>
 
       <Center height="100vh">
-        <Heading>Setup</Heading>
+        <Heading>Base setup </Heading>
       </Center>
     </>
   )
