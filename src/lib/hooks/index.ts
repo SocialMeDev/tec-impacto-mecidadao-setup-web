@@ -1,4 +1,5 @@
 export * from './useDebounce'
+export * from './useGetUserCoordinates'
 export * from './useGoogleGeolocation'
 export * from './useHotKeyWithFocus'
 export * from './useRedirect'
