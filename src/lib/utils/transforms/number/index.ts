@@ -1,2 +1,2 @@
 export * from './convertBytesNumberToString'
-export * from './numberWithPunctuation'
+export * from './formatNumberWithPunctuation'

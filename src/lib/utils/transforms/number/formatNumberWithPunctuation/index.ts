@@ -1,4 +1,4 @@
-export function numberWithPunctuation(value: number): string {
+export function formatNumberWithPunctuation(value: number): string {
   const { format } = new Intl.NumberFormat('pt-BR', {
     style: 'decimal',
   })
