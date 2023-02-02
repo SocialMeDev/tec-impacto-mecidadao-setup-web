@@ -3,7 +3,7 @@ import { createIcon, IconProps } from '@chakra-ui/icons'
 import { Icon } from 'lib/components'
 
 const Trash = createIcon({
-  displayName: 'TrashDeleteBin',
+  displayName: 'Trash',
   viewBox: '0 0 24 24',
   path: (
     <>
