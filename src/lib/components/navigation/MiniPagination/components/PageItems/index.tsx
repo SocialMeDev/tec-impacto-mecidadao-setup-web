@@ -2,7 +2,7 @@ import { FC, memo } from 'react'
 import { Flex, Text } from '@chakra-ui/react'
 
 import ArrowButton from './components/ArrowButton'
-import { numberWithPunctuation } from '@lib/utils/transforms/number'
+import { formatNumberWithPunctuation } from '@lib/utils/transforms/number'
 import { ArrowLeft, ArrowRight } from '@lib/assets/icons'
 
 type Props = {
@@ -24,9 +24,9 @@ const PageItems: FC<Props> = ({ currentPage, onChangePage, maxPages }) => {
         aria-label={currentPage === 1 ? '1° página' : `Voltar para a página ${currentPage - 1}`}
       />
 
-      <Text fontSize={textSize}>{numberWithPunctuation(currentPage)}</Text>
+      <Text fontSize={textSize}>{formatNumberWithPunctuation(currentPage)}</Text>
       <Text fontSize={textSize}>/</Text>
-      <Text fontSize={textSize}>{numberWithPunctuation(maxPages)}</Text>
+      <Text fontSize={textSize}>{formatNumberWithPunctuation(maxPages)}</Text>
 
       <ArrowButton
         Icon={ArrowRight}
