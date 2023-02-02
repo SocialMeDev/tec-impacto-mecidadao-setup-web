@@ -1,1 +1,2 @@
-export * from './diferenceBetweenDates'
+export * from './getDiferenceBetweenDates'
+export * from './getDistanceToNow'
