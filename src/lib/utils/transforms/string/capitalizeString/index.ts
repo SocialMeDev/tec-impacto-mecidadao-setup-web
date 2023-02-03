@@ -1,4 +1,4 @@
-export function capitalizeString(string: string): string {
+export function capitalizeString(string: string | undefined): string {
   if (!string) return '-'
 
   const splitedValue = string.toLowerCase().split(' ')
