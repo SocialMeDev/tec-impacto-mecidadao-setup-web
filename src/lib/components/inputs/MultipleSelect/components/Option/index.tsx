@@ -13,7 +13,7 @@ export type Props = {
 const MultipleSelectOption: FC<Props> = ({ label, value, onClick }) => {
   const ref = useRef<HTMLDivElement | null>(null)
 
-  useHotKeyWithFocus(ref, 'Enter', () => onClick({ label, value }))
+  useHotKeyWithFocus({ ref, key: 'Enter', callback: () => onClick({ label, value }) })
 
   return (
     <Box

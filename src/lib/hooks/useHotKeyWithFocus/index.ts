@@ -1,8 +1,12 @@
 import { MutableRefObject, useEffect, useRef } from 'react'
 
-type Callback = () => void
+type Params<T> = {
+  ref?: MutableRefObject<T>
+  key: string
+  callback: () => void
+}
 
-export function useHotKeyWithFocus<Type>(ref: MutableRefObject<Type>, key: string, callback: Callback): null {
+export function useHotKeyWithFocus<T>({ key, ref, callback }: Params<T>): null {
   const actionRef = useRef(callback)
 
   useEffect(() => {
@@ -11,7 +15,8 @@ export function useHotKeyWithFocus<Type>(ref: MutableRefObject<Type>, key: strin
 
   useEffect(() => {
     function onKeyDown(event: KeyboardEvent) {
-      if (document.activeElement !== ref.current) return
+      if (ref) if (document.activeElement !== ref.current) return
+
       if (event.code === key) actionRef.current()
     }
 

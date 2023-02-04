@@ -14,7 +14,7 @@ export type Props = {
 const SelectOption: FC<Props> = ({ label, value, isSelectedValue, onClick }) => {
   const ref = useRef<HTMLDivElement | null>(null)
 
-  useHotKeyWithFocus(ref, 'Enter', () => onClick(value))
+  useHotKeyWithFocus({ ref, key: 'Enter', callback: () => onClick(value) })
 
   return (
     <Box

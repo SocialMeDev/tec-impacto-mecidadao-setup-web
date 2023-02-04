@@ -23,7 +23,7 @@ const PaginationShortcut: FC<Props> = ({ id = 'shortcut', limit, totalItems, onC
     }
   }
 
-  useHotKeyWithFocus(inputRef, 'Enter', goToPage)
+  useHotKeyWithFocus({ ref: inputRef, key: 'Enter', callback: goToPage })
 
   return (
     <FormControl>
