@@ -8,7 +8,9 @@
     "start": "next start",
     "lint": "next lint",
     "commit": "git-cz",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "tree-add-lib": "git subtree add --prefix src/lib https://github.com/SocialMeDev/tec-impact-library-web.git main --squash",
+    "tree-push-lib": "git subtree push --prefix src/lib https://github.com/SocialMeDev/tec-impact-library-web.git main --squash"
   },
   "dependencies": {
     "@chakra-ui/icons": "^2.0.17",
