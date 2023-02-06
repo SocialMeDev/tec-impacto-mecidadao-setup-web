@@ -1,5 +1,6 @@
 export { default as AttachmentLink } from './AttachmentLink'
 export { default as CloudUpload } from './CloudUpload'
+export { default as Eye } from './Eye'
 export { default as Plus } from './Plus'
 export { default as Trash } from './Trash'
 export { default as ZoomMinus } from './ZoomMinus'
