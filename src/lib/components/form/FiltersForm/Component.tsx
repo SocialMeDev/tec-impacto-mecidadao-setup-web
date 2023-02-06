@@ -7,7 +7,7 @@ import ModalView from './components/ModalView'
 import FooterButtons from './components/FooterButtons'
 import FilterFormFields from './components/FormFields'
 
-import { Search1 } from 'lib/components/icons/Interface'
+import { Search } from '@lib/assets/icons'
 import { useFiltersForm } from './context/FiltersFormContext/Provider'
 import { IFiltersFormFields } from './types'
 
@@ -23,7 +23,7 @@ const FiltersFormComponent: FC<Props> = ({ view = 'Drawer', buttonProps = {}, fi
   return (
     <>
       <Flex gap={2}>
-        <Button onClick={onOpen} variant="outline" leftIcon={<Search1 />} colorScheme="gray" {...buttonProps}>
+        <Button onClick={onOpen} variant="outline" leftIcon={<Search />} colorScheme="gray" {...buttonProps}>
           Filtrar
         </Button>
 

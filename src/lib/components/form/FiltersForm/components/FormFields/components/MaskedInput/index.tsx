@@ -1,6 +1,6 @@
 import { FC, memo } from 'react'
 import { FormControl, FormLabel, FormHelperText, FormErrorMessage, InputProps } from '@chakra-ui/react'
-import { MaskedInput } from '@lib/components/inputs'
+import { MaskedInput } from '@lib/components'
 
 type Props = InputProps & {
   htmlFor: string

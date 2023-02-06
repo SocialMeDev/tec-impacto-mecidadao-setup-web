@@ -1,7 +1,7 @@
 import { memo } from 'react'
 import { Button, Flex } from '@chakra-ui/react'
 
-import { Search1 } from 'lib/components/icons/Interface'
+import { Search } from '@lib/assets/icons'
 import ResetFiltersButton from '../ResetFiltersButton'
 import { useFiltersForm } from '../../context/FiltersFormContext/Provider'
 
@@ -14,7 +14,7 @@ const FilterFooterButtons = () => {
       <Button variant="outline" onClick={onClose}>
         Cancelar
       </Button>
-      <Button isLoading={isSubmiting} leftIcon={<Search1 />} type="submit">
+      <Button isLoading={isSubmiting} leftIcon={<Search />} type="submit">
         Filtrar
       </Button>
     </Flex>

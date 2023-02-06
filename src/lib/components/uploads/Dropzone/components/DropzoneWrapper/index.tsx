@@ -13,7 +13,7 @@ export const DropzoneWrapper: FC<Props> = ({ children, onClick, onDrop }) => {
 
   const ref = useRef<HTMLDivElement | null>(null)
 
-  useHotKeyWithFocus(ref, 'Enter', onClick)
+  useHotKeyWithFocus({ ref, key: 'Enter', callback: onClick })
 
   return (
     <Center

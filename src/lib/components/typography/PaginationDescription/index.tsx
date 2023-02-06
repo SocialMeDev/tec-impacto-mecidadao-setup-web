@@ -1,6 +1,6 @@
 import { FC, memo, useMemo } from 'react'
 import { Text, Skeleton } from '@chakra-ui/react'
-import { numberWithPunctuation } from '@lib/utils/transforms/number'
+import { formatNumberWithPunctuation } from '@lib/utils/transforms/number'
 
 type Props = {
   isLoading?: boolean
@@ -13,9 +13,9 @@ type Props = {
 const PaginationDescription: FC<Props> = ({ isLoading = false, page, limit, totalItems, label = 'registros' }) => {
   const { showingTo, showingFrom, total } = useMemo(() => {
     return {
-      showingTo: numberWithPunctuation(page === 1 ? 1 : limit * page - limit + 1),
-      showingFrom: numberWithPunctuation(limit * page > totalItems ? totalItems : limit * page),
-      total: numberWithPunctuation(totalItems),
+      showingTo: formatNumberWithPunctuation(page === 1 ? 1 : limit * page - limit + 1),
+      showingFrom: formatNumberWithPunctuation(limit * page > totalItems ? totalItems : limit * page),
+      total: formatNumberWithPunctuation(totalItems),
     }
   }, [page, limit, totalItems])
 
