@@ -1,4 +1,5 @@
 export { default as AttachmentLink } from './AttachmentLink'
+export { default as BrokenLinkAttachment } from './BrokenLinkAttachment'
 export { default as CloudUpload } from './CloudUpload'
 export { default as Eye } from './Eye'
 export { default as Pen } from './Pen'
