@@ -1,7 +1,7 @@
 import { memo } from 'react'
 import { Stack, Text } from '@chakra-ui/react'
 
-import { CameraPhoto } from '@lib/components/icons/PhotoEdit'
+import { PhotoCamera } from '@lib/assets/icons'
 import { useUploadImage } from '@lib/components/uploads/UploadImage/context/Provider'
 
 function UploadWhenTakingPhoto() {
@@ -22,7 +22,7 @@ function UploadWhenTakingPhoto() {
       _hover={{ color: 'primary' }}
     >
       <Stack align="center" spacing={0}>
-        <CameraPhoto boxSize={8} />
+        <PhotoCamera boxSize={8} />
         <Text>Tirar foto</Text>
       </Stack>
     </Stack>

@@ -1,3 +1,5 @@
+// @ts-nocheck
+
 import { memo, forwardRef, useState } from 'react'
 import Cropper from 'cropperjs'
 import { Flex, Stack, Center, Image, Text, Button } from '@chakra-ui/react'
@@ -8,14 +10,12 @@ import Reverse from './components/Reverse'
 import Reset from './components/Reset'
 import { useUploadImage } from '@lib/components/uploads/UploadImage/context/Provider'
 
-type Ref = HTMLImageElement | null
-
 type Props = {
-  cropper: Cropper
+  cropper: Cropper | null
   onDownload: () => void
 }
 
-const CropperConfiguratons = forwardRef<Ref, Props>(({ cropper, onDownload }, ref) => {
+const CropperConfiguratons = forwardRef<any, Props>(({ cropper, onDownload }, ref) => {
   const { image, setImage, onUpload, closeModal } = useUploadImage()
 
   const [isLoading, setIsLoading] = useState(false)
@@ -27,7 +27,7 @@ const CropperConfiguratons = forwardRef<Ref, Props>(({ cropper, onDownload }, re
     const isSuccess = await onUpload(image.file)
     if (isSuccess) {
       setImage((oldImage) => {
-        return { ...oldImage, fileUrl: ref.current.src }
+        return { ...oldImage, fileUrl: ref?.current.src }
       })
       closeModal()
     }
@@ -43,10 +43,14 @@ const CropperConfiguratons = forwardRef<Ref, Props>(({ cropper, onDownload }, re
           <Image maxWidth="150px" maxHeight="150px" ref={ref} alt="Preview da imagem" />
         </Center>
 
-        <Reset cropper={cropper} />
-        <ZoomInOut cropper={cropper} />
-        <Rotate cropper={cropper} />
-        <Reverse cropper={cropper} />
+        {cropper && (
+          <>
+            <Reset cropper={cropper} />
+            <ZoomInOut cropper={cropper} />
+            <Rotate cropper={cropper} />
+            <Reverse cropper={cropper} />
+          </>
+        )}
       </Flex>
 
       <Stack pt={4} w="100%" align="center" justify="center">
