@@ -2,8 +2,8 @@ import { FC, memo } from 'react'
 import { createIcon, IconProps } from '@chakra-ui/icons'
 import { Icon } from 'lib/components'
 
-const PenEditIcon = createIcon({
-  displayName: 'PenEditIcon',
+const PenIcon = createIcon({
+  displayName: 'PenIcon',
   viewBox: '0 0 24 24',
   path: (
     <>
@@ -24,8 +24,8 @@ const PenEditIcon = createIcon({
   ),
 })
 
-const PenEdit: FC<IconProps> = (props) => {
-  return <Icon as={PenEditIcon} {...props} />
+const Pen: FC<IconProps> = (props) => {
+  return <Icon as={PenIcon} {...props} />
 }
 
-export default memo(PenEdit)
+export default memo(Pen)
