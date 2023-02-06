@@ -1,6 +1,7 @@
 export { default as AttachmentLink } from './AttachmentLink'
 export { default as CloudUpload } from './CloudUpload'
 export { default as Eye } from './Eye'
+export { default as Pen } from './Pen'
 export { default as Plus } from './Plus'
 export { default as Settings } from './Settings'
 export { default as ThreeDots } from './ThreeDots'
