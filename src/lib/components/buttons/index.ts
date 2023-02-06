@@ -1,4 +1,5 @@
 export { default as BindButton } from './BindButton'
 export { default as CreateButton } from './CreateButton'
 export { default as DeleteButton } from './DeleteButton'
+export { default as DotsButton } from './DotsButton'
 export { default as UpdateButton } from './UpdateButton'
