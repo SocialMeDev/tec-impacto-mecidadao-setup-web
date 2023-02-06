@@ -1,3 +1,4 @@
+export { default as AttachmentLink } from './AttachmentLink'
 export { default as CloudUpload } from './CloudUpload'
 export { default as Plus } from './Plus'
 export { default as Trash } from './Trash'
