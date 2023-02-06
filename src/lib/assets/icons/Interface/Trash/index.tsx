@@ -2,8 +2,8 @@ import { FC, memo } from 'react'
 import { createIcon, IconProps } from '@chakra-ui/icons'
 import { Icon } from 'lib/components'
 
-const Trash = createIcon({
-  displayName: 'Trash',
+const TrashIcon = createIcon({
+  displayName: 'TrashIcon',
   viewBox: '0 0 24 24',
   path: (
     <>
@@ -20,8 +20,8 @@ const Trash = createIcon({
   ),
 })
 
-const TrashIcon: FC<IconProps> = (props) => {
-  return <Icon as={Trash} {...props} />
+const Trash: FC<IconProps> = (props) => {
+  return <Icon as={TrashIcon} {...props} />
 }
 
-export default memo(TrashIcon)
+export default memo(Trash)
