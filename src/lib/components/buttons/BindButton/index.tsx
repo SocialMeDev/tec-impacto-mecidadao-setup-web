@@ -8,22 +8,8 @@ type Props = ButtonProps & {
   'aria-label'?: string
 }
 
-type ReturnedType = {
-  [key: string]: ReactElement
-}
-
 const BindButton: FC<Props> = ({ children, variant = 'outline', ...props }) => {
-  const type = children ? 'button' : 'icon'
-
-  const IconButtonType = () => {
-    return (
-      <IconButton aria-label={props['aria-label'] || 'Vincular'} variant={variant} icon={<AttachmentLink />} {...props}>
-        {children}
-      </IconButton>
-    )
-  }
-
-  const ButtonType = () => {
+  if (children) {
     return (
       <Button variant={variant} leftIcon={<AttachmentLink />} {...props}>
         {children}
@@ -31,12 +17,11 @@ const BindButton: FC<Props> = ({ children, variant = 'outline', ...props }) => {
     )
   }
 
-  const types: ReturnedType = {
-    icon: <IconButtonType />,
-    button: <ButtonType />,
-  }
-
-  return types[type]
+  return (
+    <IconButton aria-label={props['aria-label'] || 'Vincular'} variant={variant} icon={<AttachmentLink />} {...props}>
+      {children}
+    </IconButton>
+  )
 }
 
 export default memo(BindButton)
