@@ -1,6 +1,6 @@
 export { default as ArrowRight } from './ArrowRight'
 export { default as ArrowLeft } from './ArrowLeft'
 export { default as ArrowsHorizontalLeftRight } from './ArrowsHorizontalLeftRight'
-export { default as ArrowFilterUpDown } from './ArrowsVerticalUpDown'
+export { default as ArrowsVerticalUpDown } from './ArrowsVerticalUpDown'
 export { default as SpinningArrow } from './SpinningArrow'
 export { default as SpinningArrows } from './SpinningArrows'
