@@ -1,4 +1,4 @@
-import { FC, useEffect, useMemo, useRef, useState } from 'react'
+import { FC, memo, useEffect, useMemo, useRef, useState } from 'react'
 import { Box, useOutsideClick } from '@chakra-ui/react'
 
 import Options from './components/Option'
@@ -11,7 +11,7 @@ type Props = {
   onChange: (value: ISelectValue[]) => void
 }
 
-export const MultipleSelect: FC<Props> = ({ values = [], options = [], onChange }) => {
+const MultipleSelect: FC<Props> = ({ values = [], options = [], onChange }) => {
   const [selectedValues, setSelectedValues] = useState<ISelectOption[]>([])
   const [isFocused, setIsFocused] = useState(false)
 
@@ -78,3 +78,5 @@ export const MultipleSelect: FC<Props> = ({ values = [], options = [], onChange 
     </Box>
   )
 }
+
+export default memo(MultipleSelect)
