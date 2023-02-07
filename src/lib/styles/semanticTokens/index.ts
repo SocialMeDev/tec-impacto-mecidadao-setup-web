@@ -3,6 +3,6 @@ import borders from './colors/borders'
 import feedback from './colors/feedback'
 import texts from './colors/texts'
 
-const Colors = { ...backgrounds, ...feedback, ...texts, ...borders }
+const colors = { ...backgrounds, ...feedback, ...texts, ...borders }
 
-export default Colors
+export default colors
