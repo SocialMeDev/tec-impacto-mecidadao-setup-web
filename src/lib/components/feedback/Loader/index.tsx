@@ -2,15 +2,15 @@ import { FC, memo, ReactElement } from 'react'
 import { Center, Flex, Text, Spinner, BoxProps } from '@chakra-ui/react'
 
 type Props = BoxProps & {
-  children: ReactElement
+  children?: ReactElement
   text?: string
   direction?: 'column' | 'row'
-  size: 'xs' | 'sm' | 'md' | 'lg'
+  size?: 'xs' | 'sm' | 'md' | 'lg'
   thickness?: string
   speed?: string
   emptyColor?: string
   color?: string
-  isLoading: boolean
+  isLoading?: boolean
 }
 
 const LoaderDefault: FC<Props> = ({
