@@ -9,3 +9,6 @@ export * from './menu'
 export * from './modal'
 export * from './spinner'
 export * from './table'
+export * from './text'
+
+import './tooltip'
