@@ -1,7 +1,7 @@
 import { FC, memo } from 'react'
 import { createIcon } from '@chakra-ui/icons'
 import { Icon } from 'lib/components'
-import { CustomIconProps } from '@lib/protocols/icons/CustomIconProps'
+import { GlobalChakraIconProps } from '@lib/types'
 
 const Sun_Outline = createIcon({
   displayName: 'Sun_Outline',
@@ -45,7 +45,7 @@ const Sun_Solid = createIcon({
   ),
 })
 
-const Sun: FC<CustomIconProps> = ({ variant, ...props }) => {
+const Sun: FC<GlobalChakraIconProps> = ({ variant, ...props }) => {
   if (variant === 'solid') {
     return <Icon as={Sun_Solid} {...props} />
   }

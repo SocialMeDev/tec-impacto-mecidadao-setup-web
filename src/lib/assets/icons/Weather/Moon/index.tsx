@@ -1,7 +1,7 @@
 import { FC, memo } from 'react'
 import { createIcon } from '@chakra-ui/icons'
 import { Icon } from 'lib/components'
-import { CustomIconProps } from '@lib/protocols/icons/CustomIconProps'
+import { GlobalChakraIconProps } from '@lib/types'
 
 const Moon_Outline = createIcon({
   displayName: 'Moon_Outline',
@@ -39,7 +39,7 @@ const Moon_Solid = createIcon({
   ),
 })
 
-const Moon: FC<CustomIconProps> = ({ variant, ...props }) => {
+const Moon: FC<GlobalChakraIconProps> = ({ variant, ...props }) => {
   if (variant === 'solid') {
     return <Icon as={Moon_Solid} {...props} />
   }

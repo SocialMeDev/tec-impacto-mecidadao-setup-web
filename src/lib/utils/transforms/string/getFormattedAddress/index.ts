@@ -1,4 +1,4 @@
-import { AddressBody } from '@lib/protocols/address/AddressBody'
+import { GlobalAddress } from '@lib/types'
 import { cepMask } from '@lib/utils/masks'
 import { capitalizeString } from '@lib/utils/transforms/string'
 
@@ -10,7 +10,7 @@ function checkCepFieldExist(string?: string) {
   return string ? '' : ' ' + cepMask(string)
 }
 
-export function formatAddresse(place: AddressBody): string {
+export function formatAddresse(place: GlobalAddress): string {
   const { address, address_neighbourhood, address_number, address_city, address_uf, address_zip_code } = place
 
   const streat = address
