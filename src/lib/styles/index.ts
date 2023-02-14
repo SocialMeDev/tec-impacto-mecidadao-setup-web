@@ -1,18 +1,8 @@
 import { extendTheme, withDefaultColorScheme, withDefaultSize } from '@chakra-ui/react'
 
-import defaultFonts from './fonts'
-import defaultSemanticTokens from './semanticTokens'
-import defaultGlobal from './global'
-
-type Fonts = {
-  heading: string
-  body: string
-}
-
-type CkakraThemeOptions = {
-  size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl'
-  colorScheme?: string
-}
+import fonts from './fonts'
+import semanticTokens from './semanticTokens'
+import global from './global'
 
 type Colors = {
   100: string
@@ -33,55 +23,39 @@ type SemanticTokens = {
   }
 }
 
+type Fonts = {
+  heading: string
+  body: string
+}
+
 type Params = {
-  global?: object
-  semanticTokens?: SemanticTokens
   colors?: Colors
-  fonts?: Fonts
-  options?: CkakraThemeOptions
 }
 
 type NewTheme = {
-  global?: object
   colors?: Colors
-  fonts?: Fonts
-  options?: CkakraThemeOptions
+  global: object
+  fonts: Fonts
   semanticTokens: {
     colors: SemanticTokens
   }
 }
 
-function createCustomChakraTheme(configs: Params) {
+function createCustomChakraTheme({ colors }: Params) {
   const newTheme: NewTheme = {
+    global,
+    fonts,
     semanticTokens: {
-      colors: {},
+      colors: semanticTokens,
     },
   }
 
-  let fonts: Fonts = defaultFonts
-
-  if (configs.fonts) fonts = configs.fonts
-
-  newTheme.fonts = fonts
-
-  if (configs.colors) newTheme.colors = configs.colors
-
-  let global: object = defaultGlobal
-
-  if (configs.global) global = Object.assign(configs.global, defaultGlobal)
-
-  newTheme.global = global
-
-  let semanticTokens: SemanticTokens = defaultSemanticTokens
-
-  if (configs.semanticTokens) semanticTokens = Object.assign(defaultSemanticTokens, configs.semanticTokens)
-
-  newTheme.semanticTokens.colors = semanticTokens
+  if (colors) newTheme.colors = colors
 
   const customTheme = extendTheme(
     newTheme,
-    withDefaultColorScheme({ colorScheme: configs.options?.colorScheme || 'primary' }),
-    withDefaultSize({ size: configs.options?.size || 'sm' })
+    withDefaultColorScheme({ colorScheme: 'primary' }),
+    withDefaultSize({ size: 'sm' })
   )
 
   return customTheme

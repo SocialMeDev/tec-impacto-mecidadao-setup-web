@@ -16,7 +16,6 @@ export function useHotKeyWithFocus<T>({ key, ref, callback }: Params<T>): null {
   useEffect(() => {
     function onKeyDown(event: KeyboardEvent) {
       if (ref) if (document.activeElement !== ref.current) return
-
       if (event.code === key) actionRef.current()
     }
 
