@@ -29,7 +29,7 @@ type Fonts = {
 }
 
 type Params = {
-  colors?: Colors
+  colors: Colors
 }
 
 type NewTheme = {
@@ -41,7 +41,7 @@ type NewTheme = {
   }
 }
 
-function createCustomChakraTheme({ colors }: Params) {
+function createCustomTheme(params?: Params) {
   const newTheme: NewTheme = {
     global,
     fonts,
@@ -50,7 +50,7 @@ function createCustomChakraTheme({ colors }: Params) {
     },
   }
 
-  if (colors) newTheme.colors = colors
+  if (params) newTheme.colors = params.colors
 
   const customTheme = extendTheme(
     newTheme,
@@ -61,4 +61,4 @@ function createCustomChakraTheme({ colors }: Params) {
   return customTheme
 }
 
-export default createCustomChakraTheme
+export default createCustomTheme
