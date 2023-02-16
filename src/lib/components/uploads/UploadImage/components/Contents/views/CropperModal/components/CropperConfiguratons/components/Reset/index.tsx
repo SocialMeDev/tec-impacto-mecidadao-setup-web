@@ -1,7 +1,7 @@
 import { FC, memo } from 'react'
 import { Flex, IconButton, Text } from '@chakra-ui/react'
 
-import { SpinningArrows } from '@lib/assets/icons'
+import { SpinningArrows } from '@lib/components/icons'
 
 type Props = {
   cropper: Cropper

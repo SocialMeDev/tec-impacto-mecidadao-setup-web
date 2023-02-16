@@ -1,7 +1,7 @@
 import { FC, memo, ReactElement, useMemo } from 'react'
 import { IconButton, Button, useDisclosure, ButtonProps } from '@chakra-ui/react'
 
-import { Trash } from 'lib/assets/icons'
+import { Trash } from '@lib/components/icons'
 import ConfirmDeleteModal from './components/ConfirmDeleteModal'
 
 type SelectedButton = {

@@ -1,7 +1,7 @@
 import { FC, memo, ReactElement } from 'react'
 import { Button, ButtonProps, IconButton } from '@chakra-ui/react'
 
-import { Pen } from '@lib/assets/icons'
+import { Pen } from '@lib/components/icons'
 
 type Props = ButtonProps & {
   children: ReactElement

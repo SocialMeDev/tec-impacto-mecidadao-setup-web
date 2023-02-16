@@ -1,7 +1,7 @@
 import { FC, memo } from 'react'
 import { Flex, IconButton, Text } from '@chakra-ui/react'
 
-import { ZoomMinus, ZoomPlus } from '@lib/assets/icons'
+import { ZoomMinus, ZoomPlus } from '@lib/components/icons'
 
 type Props = {
   cropper: Cropper

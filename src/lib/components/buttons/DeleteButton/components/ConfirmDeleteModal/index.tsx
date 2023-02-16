@@ -13,7 +13,7 @@ import {
   Stack,
 } from '@chakra-ui/react'
 
-import { Trash } from 'lib/assets/icons'
+import { Trash } from '@lib/components/icons'
 
 interface Props {
   isOpen: boolean

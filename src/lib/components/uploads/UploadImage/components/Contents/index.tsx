@@ -1,7 +1,7 @@
 import { memo, useMemo, Fragment, ReactElement } from 'react'
 import { Box, IconButton, Modal, ModalCloseButton, ModalOverlay, ModalContent } from '@chakra-ui/react'
 
-import { PhotoCamera } from '@lib/assets/icons'
+import { PhotoCamera } from '@lib/components/icons'
 import CropperModal from './views/CropperModal'
 import Gallery from './views/Gallery'
 import WebcamPreview from './views/WebcamPreview'

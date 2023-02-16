@@ -1,7 +1,7 @@
 import { memo } from 'react'
 import { Stack, Text } from '@chakra-ui/react'
 
-import { PhotoCamera } from '@lib/assets/icons'
+import { PhotoCamera } from '@lib/components/icons'
 import { useUploadImage } from '@lib/components/uploads/UploadImage/context/Provider'
 
 function UploadWhenTakingPhoto() {

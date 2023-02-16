@@ -2,7 +2,7 @@ import { memo, forwardRef, ReactElement } from 'react'
 
 import { MenuButton, IconButton, MenuButtonProps } from '@chakra-ui/react'
 
-import { ThreeDots } from '@lib/assets/icons'
+import { ThreeDots } from '@lib/components/icons'
 
 type Props = MenuButtonProps & {
   children: ReactElement

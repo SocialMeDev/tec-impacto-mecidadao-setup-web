@@ -1,7 +1,7 @@
 import { FC, memo } from 'react'
 import { IconButton, IconButtonProps } from '@chakra-ui/react'
 
-import { MenuArrowSquare } from '@lib/assets/icons'
+import { MenuArrowSquare } from '@lib/components/icons'
 import { useSidebar } from '@lib/contexts/Sidebar/Provider'
 
 const SidebarCollapseButton: FC<IconButtonProps> = (props) => {

@@ -1,7 +1,7 @@
 import { memo, useState, useCallback, FC } from 'react'
 import { Flex, IconButton, Text } from '@chakra-ui/react'
 
-import { ArrowsHorizontalLeftRight, ArrowsVerticalUpDown } from '@lib/assets/icons'
+import { ArrowsHorizontalLeftRight, ArrowsVerticalUpDown } from '@lib/components/icons'
 
 type Props = {
   cropper: Cropper

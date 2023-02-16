@@ -3,7 +3,7 @@ import { Flex, Text } from '@chakra-ui/react'
 
 import ArrowButton from './components/ArrowButton'
 import { formatNumberWithPunctuation } from '@lib/utils/transforms/number'
-import { ArrowLeft, ArrowRight } from '@lib/assets/icons'
+import { ArrowLeft, ArrowRight } from '@lib/components/icons'
 
 type Props = {
   currentPage: number

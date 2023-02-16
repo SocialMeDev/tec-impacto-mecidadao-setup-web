@@ -1,7 +1,7 @@
 import { memo } from 'react'
 import { Text, VStack, Stack } from '@chakra-ui/react'
 
-import { CloudUpload } from '@lib/assets/icons'
+import { CloudUpload } from '@lib/components/icons'
 import { useUploadImage } from '../../context/Provider'
 
 function ImageCard() {

@@ -1,7 +1,7 @@
 import { FC, memo, ReactElement } from 'react'
 import { IconButton, Button, ButtonProps } from '@chakra-ui/react'
 
-import { SpinningArrows } from '@lib/assets/icons'
+import { SpinningArrows } from '@lib/components/icons'
 
 type Props = ButtonProps & {
   children: ReactElement

@@ -1,7 +1,7 @@
 import { memo } from 'react'
 import { Stack, Text } from '@chakra-ui/react'
 
-import { Plus } from '@lib/assets/icons'
+import { Plus } from '@lib/components/icons'
 import { useUploadImage } from '@lib/components/uploads/UploadImage/context/Provider'
 
 function UploadImageFromDevice() {

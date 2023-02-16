@@ -1,1 +1,1 @@
-export { default as FormItem } from './Formitem'
+export { default as FormItem } from './FormItem'

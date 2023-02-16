@@ -68,9 +68,11 @@ const Pagination: FC<Props> = ({
 
             <Flex align="center" flexWrap="wrap" gap={2}>
               <PageItems currentPage={currentPage} selectedPages={selectedPages} onChangePage={onChangePage} />
+
               {handleChangeLimit && (
                 <LimitSelect limitOptions={limitOptions} limit={limit} onChangeLimit={handleChangeLimit} />
               )}
+
               <PageShortCut totalItems={totalItems} limit={limit} onChangePage={onChangePage} />
             </Flex>
           </Fragment>

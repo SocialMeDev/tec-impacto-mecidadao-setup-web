@@ -1,6 +1,7 @@
 import { FC, memo } from 'react'
 import { VStack, Heading, Text, useColorModeValue } from '@chakra-ui/react'
-import { DownloadIcon } from '@chakra-ui/icons'
+
+import { CloudUpload } from '@lib/components/icons'
 import { convertBytesNumberToString } from '@lib/utils/transforms/number'
 
 type Props = {
@@ -11,7 +12,7 @@ type Props = {
 const DropzoneContent: FC<Props> = ({ maxSize, acceptFiles }) => {
   return (
     <VStack>
-      <DownloadIcon
+      <CloudUpload
         transition="all 250ms"
         color={useColorModeValue('gray.400', 'gray.600')}
         boxSize={{ base: 8, sm: 8, md: 12, lg: 12 }}
