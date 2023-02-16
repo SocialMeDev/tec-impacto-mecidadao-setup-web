@@ -1,26 +1,14 @@
 import createFileValidator from './utils/createFileValidator'
 import formatFile from './utils/formatFile'
+import { DropzoneFiles, FileValidators } from '../../types'
 
-export type FormatedFile = {
-  file: File
-  extension: string
-  url: string
-  size: number
-  name: string
-}
-
-export type FileValidators = {
-  acceptFiles: string[]
-  maxSize: number
-}
-
-type DispatchInputFileUpload = (files: FileList) => FormatedFile[]
+type DispatchInputFileUpload = (files: FileList) => DropzoneFiles[]
 
 export const useDropzoneUpload = ({ acceptFiles, maxSize }: FileValidators): DispatchInputFileUpload => {
   const validateFile = createFileValidator({ acceptFiles, maxSize })
 
   const dispatchInputFileUpload = (files: FileList) => {
-    let formatedFiles: FormatedFile[] = Array.from(files).map((file) => {
+    let formatedFiles: DropzoneFiles[] = Array.from(files).map((file) => {
       return formatFile(file)
     })
 

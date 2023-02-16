@@ -1,6 +1,6 @@
-import { FormatedFile } from '../..'
+import { DropzoneFiles } from '../../../../types'
 
-export default function formatFile(file: File): FormatedFile {
+export default function formatFile(file: File): DropzoneFiles {
   const url = URL.createObjectURL(file)
 
   const { name, size } = file

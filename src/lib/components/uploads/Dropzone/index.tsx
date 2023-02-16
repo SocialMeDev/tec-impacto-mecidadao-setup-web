@@ -3,13 +3,14 @@ import { Input } from '@chakra-ui/react'
 
 import DropzoneContent from './components/DropzoneContent'
 import DropzoneWrapper from './components/DropzoneWrapper'
-import { useDropzoneUpload, FormatedFile } from './hooks/useDropzoneUpload'
+import { useDropzoneUpload } from './hooks/useDropzoneUpload'
+import { DropzoneFiles } from './types'
 
 type Props = {
   multiple?: boolean
   acceptFiles?: string[]
   maxSize?: number
-  onUpload: (files: FormatedFile[]) => Promise<void>
+  onUpload: (files: DropzoneFiles[]) => Promise<void>
 }
 
 const Dropzone: FC<Props> = ({ onUpload, acceptFiles = [], maxSize = 0, multiple = true }) => {

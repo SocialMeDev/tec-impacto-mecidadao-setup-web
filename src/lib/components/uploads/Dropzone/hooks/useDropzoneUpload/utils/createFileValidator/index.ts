@@ -1,4 +1,4 @@
-import { FileValidators, FormatedFile } from '../..'
+import { FileValidators, DropzoneFiles } from '../../../../types'
 
 export default function createFileValidator({ acceptFiles, maxSize }: FileValidators) {
   const isValidExtension = (fileExtension: string) => {
@@ -11,7 +11,7 @@ export default function createFileValidator({ acceptFiles, maxSize }: FileValida
     return maxSize >= filesize
   }
 
-  const validateFile = (file: FormatedFile) => {
+  const validateFile = (file: DropzoneFiles) => {
     const isFileAccept = isValidExtension(file.extension.toUpperCase())
     const isMaxSizeReach = isValidSize(file.size)
 
