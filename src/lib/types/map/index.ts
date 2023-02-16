@@ -1,1 +1,1 @@
-export * from './GlobalAddress'
+export * from './AddressBody'

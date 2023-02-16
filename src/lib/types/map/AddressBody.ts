@@ -1,4 +1,4 @@
-export type GlobalAddress = {
+export type AddressBody = {
   address?: string
   address_neighbourhood?: string
   address_number?: string

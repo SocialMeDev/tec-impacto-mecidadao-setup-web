@@ -1,1 +1,1 @@
-export * from './GlobalUser'
+export * from './User'
