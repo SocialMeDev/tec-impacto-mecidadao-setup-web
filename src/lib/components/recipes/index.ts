@@ -1,1 +1,1 @@
-export { default as UserFinder } from './QualquerCoisa'
+export { default as UserFinder } from './UserFinder'
