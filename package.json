@@ -7,9 +7,10 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
+    "init:husky": "yarn husky install & yarn husky add .husky/pre-commit \"yarn tsc --pretty --noEmit && yarn eslint . --fix --max-warnings=0\"",
     "tree-add-lib": "git subtree add --prefix src/lib https://github.com/SocialMeDev/tec-impacto-library-web.git main --squash",
     "tree-push-lib": "git subtree push --prefix src/lib https://github.com/SocialMeDev/tec-impacto-library-web.git main",
-    "init": "husky install && yarn tree-add-lib && yarn install"
+    "init:setup": "yarn init:husky && yarn tree-add-lib && yarn install"
   },
   "dependencies": {
     "@chakra-ui/icons": "^2.0.17",
