@@ -1,6 +1,0 @@
-export * from './formatDateToString'
-export * from './formatHourToString'
-export * from './getDiferenceBetweenDates'
-export * from './getDistanceToNow'
-export * from './getFormattedDistanceBetweenDates'
-export * from './getInterval'
