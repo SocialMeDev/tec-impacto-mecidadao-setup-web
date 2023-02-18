@@ -7,10 +7,9 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "commit": "git-cz",
-    "prepare": "husky install",
     "tree-add-lib": "git subtree add --prefix src/lib https://github.com/SocialMeDev/tec-impacto-library-web.git main --squash",
-    "tree-push-lib": "git subtree push --prefix src/lib https://github.com/SocialMeDev/tec-impacto-library-web.git main"
+    "tree-push-lib": "git subtree push --prefix src/lib https://github.com/SocialMeDev/tec-impacto-library-web.git main",
+    "init": "husky install && yarn tree-add-lib && yarn install"
   },
   "dependencies": {
     "@chakra-ui/icons": "^2.0.17",
@@ -40,8 +39,6 @@
     "@types/react-geocode": "^0.2.1",
     "@typescript-eslint/eslint-plugin": "^5.48.0",
     "@typescript-eslint/parser": "^5.48.0",
-    "commitizen": "^4.2.6",
-    "cz-conventional-changelog": "3.3.0",
     "eslint": "^8.33.0",
     "eslint-config-next": "^13.1.6",
     "eslint-config-prettier": "^8.6.0",
@@ -51,10 +48,5 @@
     "husky": "^8.0.3",
     "lint-staged": "^13.1.0",
     "prettier": "2.8.1"
-  },
-  "config": {
-    "commitizen": {
-      "path": "./node_modules/cz-conventional-changelog"
-    }
   }
 }
