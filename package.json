@@ -7,10 +7,13 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "init:husky": "yarn husky install & yarn husky add .husky/pre-commit \"yarn tsc --pretty --noEmit && yarn eslint . --fix --max-warnings=0\"",
+    "husky": "husky install",
+    "husky:pre-commit": "husky add .husky/pre-commit \"npm run pre-commit\"",
+    "pre-commit": "yarn tsc --pretty --noEmit && yarn eslint . --fix --max-warnings=0",
     "tree-add-lib": "git subtree add --prefix src/lib https://github.com/SocialMeDev/tec-impacto-library-web.git main --squash",
+    "tree-pull-lib": "git subtree pull --prefix src/lib https://github.com/SocialMeDev/tec-impacto-library-web.git main --squash",
     "tree-push-lib": "git subtree push --prefix src/lib https://github.com/SocialMeDev/tec-impacto-library-web.git main",
-    "init:setup": "yarn init:husky && yarn tree-add-lib && yarn install"
+    "init:setup": "yarn && yarn husky && yarn husky:pre-commit"
   },
   "dependencies": {
     "@chakra-ui/icons": "^2.0.17",
@@ -46,7 +49,7 @@
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-react": "^7.31.11",
     "eslint-plugin-react-hooks": "^4.6.0",
-    "husky": "^8.0.3",
+    "husky": "^6.0.0",
     "prettier": "2.8.1"
   }
 }
