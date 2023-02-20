@@ -4,6 +4,9 @@
 /package-lock.json
 /.husky
 
+# env
+.env
+
 # next.js
 /.next/
 /out/
